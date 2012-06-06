@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>OmniAuth Passport by everydayhero</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>OmniAuth Passport</h1>
+        <p>Everyday Hero Passport</p>
+        <p class="view"><a href="https://github.com/everydayhero/omniauth-passport">View the Project on GitHub <small>everydayhero/omniauth-passport</small></a></p>
+        <ul>
+          <li><a href="https://github.com/everydayhero/omniauth-passport/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/everydayhero/omniauth-passport/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/everydayhero/omniauth-passport">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>OmniAuth Passport</h1>
+
+<p>This gem contains the Everyday Hero Passport strategy for OmniAuth.</p>
+
+<h2>Experimental</h2>
+
+<p>This gem will only work if you have a copy of our OAuth2 server running locally on <a href="http://passport.edh.dev">http://passport.edh.dev</a> which probably isn't you. Once we sought out the URL structure I will make a 1.0.0 release.</p>
+
+<h2>How To Use It</h2>
+
+<p>Usage is as per any other OmniAuth 2.0 strategy. Add the strategy to your <code>Gemfile</code>:</p>
+
+<pre><code>gem 'omniauth-passport', '~&gt; 0.0.1'
+</code></pre>
+
+<p>After adding the gem you will need to <code>bundle install</code> and create <code>config/initializers/omniauth.rb</code>.</p>
+
+<pre><code>Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :passport, ENV['PASSPORT_KEY'], ENV['PASSPORT_SECRET']
+end
+</code></pre>
+
+<p>The typical convention for key / secret pairs is storing them in an environment variable. Lots of tools (e.g. POW and Procfile) will source an environment file before loading which is a great place to put the environment variables.</p>
+
+<p>Currently we are returning the users <code>name</code>, <code>email</code> and <code>uid</code>.</p>
+
+<p>For more information on hooking up omniauth checkout the README at: <a href="https://github.com/intridea/omniauth">https://github.com/intridea/omniauth</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/everydayhero">everydayhero</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

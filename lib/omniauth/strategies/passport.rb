@@ -16,8 +16,10 @@ module OmniAuth
       end
 
       def raw_info
-        # @raw_info ||= access_token.get('/api/v1/me.json').parsed
-        {'email' => 'coop@latrobest.com', 'name' => 'Tim Cooper', 'id' => 1}
+        @raw_info ||= begin
+          parsed = access_token.get('/api/v1/me').parsed
+          parsed.fetch 'user', Hash.new
+        end
       end
     end
   end

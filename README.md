@@ -4,7 +4,7 @@ This gem contains the Everyday Hero Passport strategy for OmniAuth.
 
 ## Experimental
 
-This gem will only work if you have a copy of our OAuth2 server running locally on http://passport.edh.dev which probably isn't you. Once we sought out the URL structure I will make a 1.0.0 release.
+This gem will only work if you have a copy of our OAuth2 server running locally on http://passport.edh.dev which probably isn't you. Once we sort out the URL structure I will make a 1.0.0 release.
 
 ## How To Use It
 
@@ -20,6 +20,6 @@ After adding the gem you will need to `bundle install` and create `config/initia
 
 The typical convention for key / secret pairs is storing them in an environment variable. Lots of tools (e.g. POW and Procfile) will source an environment file before loading which is a great place to put the environment variables.
 
-Currently we are returning the users `name`, `email` and `uid`.
+Currently we are returning the user's `name`, `email` and `uid`.
 
-For more information on hooking up omniauth checkout the README at: https://github.com/intridea/omniauth
+For more information on hooking up omniauth check out the README at: https://github.com/intridea/omniauth

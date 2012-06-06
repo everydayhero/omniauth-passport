@@ -1,29 +1,25 @@
-# Omniauth::Passport
+# OmniAuth Passport
 
-TODO: Write a gem description
+This gem contains the Everyday Hero Passport strategy for OmniAuth.
 
-## Installation
+## Experimental
 
-Add this line to your application's Gemfile:
+This gem will only work if you have a copy of our OAuth2 server running locally on http://passport.edh.dev which probably isn't you. Once we sought out the URL structure I will make a 1.0.0 release.
 
-    gem 'omniauth-passport'
+## How To Use It
 
-And then execute:
+Usage is as per any other OmniAuth 2.0 strategy. Add the strategy to your `Gemfile`:
 
-    $ bundle
+    gem 'omniauth-passport', '~> 0.0.1'
 
-Or install it yourself as:
+After adding the gem you will need to `bundle install` and create `config/initializers/omniauth.rb`.
 
-    $ gem install omniauth-passport
+    Rails.application.config.middleware.use OmniAuth::Builder do
+      provider :passport, ENV['PASSPORT_KEY'], ENV['PASSPORT_SECRET']
+    end
 
-## Usage
+The typical convention for key / secret pairs is storing them in an environment variable. Lots of tools (e.g. POW and Procfile) will source an environment file before loading which is a great place to put the environment variables.
 
-TODO: Write usage instructions here
+Currently we are returning the users `name`, `email` and `uid`.
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+For more information on hooking up omniauth checkout the README at: https://github.com/intridea/omniauth

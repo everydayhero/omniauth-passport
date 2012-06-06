@@ -4,7 +4,7 @@ This gem contains the Everyday Hero Passport strategy for OmniAuth.
 
 ## Experimental
 
-This gem will only work if you have a copy of our OAuth2 server running locally on http://passport.edh.dev which probably isn't you. Once we sort out the URL structure I will make a 1.0.0 release.
+This gem will only work if you have a copy of our OAuth2 server running locally on http://passport.edh.dev which you don't. Once we sort out the URL structure I will make a 1.0.0 release.
 
 ## How To Use It
 

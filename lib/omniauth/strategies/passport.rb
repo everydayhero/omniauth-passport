@@ -4,7 +4,7 @@ module OmniAuth
   module Strategies
     class Passport < OmniAuth::Strategies::OAuth2
       option :name, 'passport'
-      option :client_options, {:site => 'http://passport.edh.dev'}
+      option :client_options, {:site => 'http://114.141.198.124:3000'}
 
       uid { raw_info['id'] }
 

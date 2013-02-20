@@ -16,6 +16,13 @@ module OmniAuth
         }
       end
 
+      def request_phase
+        branding_params = request.params.slice('background_colour', 'tagline', 'header_image')
+        options.authorize_params.update branding_params
+
+        super
+      end
+
       def raw_info
         @raw_info ||= begin
           parsed = access_token.get('/api/v1/me').parsed

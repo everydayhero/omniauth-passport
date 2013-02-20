@@ -2,8 +2,8 @@
 require File.expand_path('../lib/omniauth-passport/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Tim Cooper"]
-  gem.email         = ["timc@everydayhero.com.au"]
+  gem.authors       = ["Tim Cooper", "Marty Zalega"]
+  gem.email         = ["timc@everydayhero.com.au", "marty@zalega.me"]
   gem.description   = %q{OmniAuth strategy for Everyday Hero's Passport}
   gem.summary       = %q{OmniAuth strategy for Everyday Hero's Passport}
   gem.homepage      = "http://everydayhero.github.com/omniauth-passport"

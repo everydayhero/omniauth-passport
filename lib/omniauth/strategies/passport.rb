@@ -17,7 +17,7 @@ module OmniAuth
       end
 
       def request_phase
-        branding_params = request.params.slice('background_colour', 'tagline', 'header_image')
+        branding_params = request.params.slice('background_colour', 'tagline', 'header_image', 'background_image')
         options.authorize_params.update branding_params
 
         super

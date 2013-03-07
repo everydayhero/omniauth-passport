@@ -3,6 +3,8 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Passport < OmniAuth::Strategies::OAuth2
+      PARAMS = %w[name email background_colour tagline header_image background_image]
+
       option :name, 'passport'
       option :client_options, {:site => 'https://passport.everydayhero.com'}
 
@@ -17,8 +19,8 @@ module OmniAuth
       end
 
       def request_phase
-        branding_params = request.params.slice('background_colour', 'tagline', 'header_image', 'background_image')
-        options.authorize_params.update branding_params
+        params = request.params.slice *PARAMS
+        options.authorize_params.update params
 
         super
       end

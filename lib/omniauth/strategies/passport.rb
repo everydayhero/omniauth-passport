@@ -3,7 +3,7 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Passport < OmniAuth::Strategies::OAuth2
-      PARAMS = %w[name email background_colour tagline header_image background_image]
+      PARAMS = %w[name email phone background_colour tagline header_image background_image]
 
       option :name, 'passport'
       option :client_options, {:site => 'https://passport.everydayhero.com'}

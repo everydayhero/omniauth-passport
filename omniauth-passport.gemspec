@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Omniauth::Passport::VERSION
 
-  gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.1.1'
+  gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.1'
 end
